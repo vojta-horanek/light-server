@@ -1,0 +1,14 @@
+[Unit]
+Description=Bedroom light server
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+Restart=on-failure
+ExecStart=/usr/bin/light
+
+[Install]
+WantedBy=multi-user.target
